@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 20px;
+  /* background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #e9ecef 100%); */
+  background-image: url("/../img/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+  background-color: rgba(0, 0, 0, 0.1);
+  background-blend-mode: multiply;
+  font-family: "Roboto", sans-serif;
+
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.top-content {
+  letter-spacing: 4px;
+}
+
+h1 {
+  font-size: 70px;
+  /* font-weight: 600; */
+  background-image: linear-gradient(to left, #060709, #bfb4ca);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+h5 {
+  font-size: 30px;
+}
+
+.container .second {
+  border-right: 2px solid black;
+}
+
+.col-md-5 p {
+  letter-spacing: 1px;
+  color: grey;
+}

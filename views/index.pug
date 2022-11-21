@@ -1,0 +1,127 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title NITA Student Portal
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/style.css')
+    //- style.
+    //-   * {
+    //-     margin: 0;
+    //-     padding: 0;
+    //-     box-sizing: border-box;
+    //-   }
+
+    //-   body {
+    //-     padding-top: 20px;
+    //-     /* background-color: #85ffbd;
+    //-     background-image: linear-gradient(45deg, #85ffbd 0%, #e9ecef 100%); */
+    //-     background-image: url("/../img/background.jpg");
+    //-     background-size: cover;
+    //-     background-attachment: fixed;
+
+    //-     background-color: rgba(0, 0, 0, 0.1);
+    //-     background-blend-mode: multiply;
+    //-     font-family: "Roboto", sans-serif;
+
+    //-     font-size: 15px;
+    //-     font-weight: 300;
+    //-     line-height: 28px;
+    //-   }
+
+    //-   .top-content {
+    //-     letter-spacing: 4px;
+    //-   }
+
+    //-   h1 {
+    //-     font-size: 70px;
+    //-     /* font-weight: 600; */
+    //-     background-image: linear-gradient(to left, #060709, #bfb4ca);
+    //-     color: transparent;
+    //-     background-clip: text;
+    //-     -webkit-background-clip: text;
+    //-   }
+    //-   h5 {
+    //-     font-size: 30px;
+    //-   }
+
+    //-   .container .second {
+    //-     border-right: 2px solid black;
+    //-   }
+
+    //-   .col-md-5 p {
+    //-     letter-spacing: 1px;
+    //-     color: grey;
+    //-   }
+  
+  body
+-//  Top Content
+    .top-content
+    h1.text-center NITA Student Portal
+    br
+    h5.text-center
+        | A portal dedicated towards the betterment of students.
+-//  Main Content
+
+    br
+    br
+    .container
+      .row
+        .col-md-5.first
+          form.text-center(action='http://localhost:3000/login' method='post')
+            p.text-center(style='font-size: 25px; color: black')
+                | Login
+            .form-group.text-left
+                input.form-control(type='text' required='' name='email' placeholder='Enter email')
+         
+            .form-group.text-left
+                input.form-control(type='password' required='' name='password' placeholder='Enter password')
+            button.btn.btn-outline-primary(type='submit' name='login' value='Log In' style='margin-right:7px')
+                | Login
+            button.btn.btn-outline-success(type='button' name='register' data-toggle='modal' data-target='#modalStudent')
+                | Register
+      
+          #modalStudent.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header.text-center
+                        h4.modal-title.w-100 Student Registration
+                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                            span(aria-hidden='true') &times;
+                    .modal-body.mx-3
+                        form(action='http://localhost:3000/signup' method='post' class='text-center')
+                            .form-group.text-left
+                            input.form-control(type='text' required='' name='name' placeholder='Enter full name')
+                            .form-group.text-left
+                            input.form-control(type='email' required='' name='email' placeholder='Enter email')
+                            .form-group.text-left
+                            input.form-control(type='password' required='' name='password' placeholder='Enter password')
+                            .form-group.text-left
+                            input.form-control(type='number' required='' name='mobileNumber' placeholder='Enter mobile number')
+                            .form-group.text-left
+                            input.form-control(type='text' required='' name='course' placeholder='Enter Course')
+                            .form-group.text-left
+                            input.form-control(type='text' required='' name='branch' placeholder='Enter Branch')
+                            .modal-footer.d-flex.justify-content-center
+                            button.btn.btn-outline-success(type='submit' style='margin-right:7px' onclick='registrationFn()')
+                                | Register 
+                             
+                            button.btn.btn-outline-warning(type='reset')
+                                | Reset
+        .col-md-2.second
+        .col-md-5
+          h2 About this Application
+          p
+            | This application is developed to help the student to have an all in
+            | one solution to various things such as sharing notes among each
+            | other, participating in various quizzes, having a graphical analysis
+            | of their performances, getting placement information and getting
+            | emails regarding various events.
+    script(src='https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js')
+    script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js')
+    script.
+      const registrationFn=function(){
+      alert('Registration Successful. A welcome message has been sent to your registered email address.')}

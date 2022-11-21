@@ -1,0 +1,60 @@
+* {
+  color: black;
+  font-size: 16px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  /* font-size: 15px; */
+  /* font-weight: 300; */
+  line-height: 28px;
+}
+h1 {
+  font-size: 50px;
+  /* font-weight: 600; */
+  background-image: linear-gradient(to left, #060709, #bfb4ca);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+h3 {
+  background-image: linear-gradient(to left, #060709, #bfb4ca);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 20px;
+}
+.user_heading {
+  margin-top: 30px;
+  background-image: linear-gradient(to left, #0a2f3c, #bef4f2);
+  color: transparent;
+  text-shadow: 3px 2px solid black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 30px;
+}
+.container-fluid {
+  padding-top: 20px;
+  /* margin-top: 20px; */
+}
+.logout_form {
+  margin-top: 25px;
+  margin-right: 20px;
+}
+p {
+  font-size: 10px;
+}
+
+.table-heading-h4 {
+  background-image: linear-gradient(to left, #fa9fbd, #3d0f30);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.all-users {
+  display: none;
+}
+
+.all-buttons .btn {
+  margin-right: 10px;
+}
